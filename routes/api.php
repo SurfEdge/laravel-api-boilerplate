@@ -20,3 +20,6 @@ Route::get('/user/hello',function(Request $request){
 Route::post('/user/hello',function(Request $request){
 	return "Hello World from POST Request";
 });
+
+// Route for the student controller
+Route::get('/user/student','studentController@index');
