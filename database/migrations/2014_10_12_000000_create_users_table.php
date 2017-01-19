@@ -20,6 +20,11 @@ class CreateUsersTable extends Migration
             $table->string('dob');
             $table->string('address');
         });
+
+        // To enter additional coloumns
+        Schema::table('users', function (Blueprint $table) {
+            $table->timestamps();
+        });
     }
 
     /**
@@ -31,4 +36,5 @@ class CreateUsersTable extends Migration
     {
         Schema::dropIfExists('users');
     }
+
 }
